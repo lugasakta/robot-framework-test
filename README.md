@@ -11,7 +11,7 @@ This project uses the Robot Framework for automated testing.
 
 2. Navigate to the project directory:
     ```sh
-    cd robot-framework
+    cd robot-framework-test
     ```
 3. Install the required dependencies:
     ```sh
