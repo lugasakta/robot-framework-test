@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2025-03-08T22:31:38.768213" rpa="false" schemaversion="5">
+<suite id="s1" name="My-Demo-App" source="/Users/lugasaktafrimanda/Downloads/robot-framework/my-demo-app.robot">
+<kw name="Open Test Application" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM SERVER URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appWaitActivity=*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-03-08T22:31:38.860138" elapsed="4.741638"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:38.859781" elapsed="4.742655"/>
+</kw>
+<test id="s1-t1" name="User should be success login when login using valid data" line="16">
+<kw name="User should be on home page">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:44.003255" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/mTvTitle</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/mTvTitle</arg>
+<arg>timeout=${WAIT_TIME_OUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-03-08T22:31:43.605254" elapsed="0.398146"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:43.604303" elapsed="0.399336"/>
+</kw>
+<kw name="User go to login page">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:44.006625" level="INFO">Clicking element 'id=com.saucelabs.mydemoapp.android:id/menuIV'.</msg>
+<msg time="2025-03-08T22:31:45.747967" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/menuIV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/menuIV</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:44.004616" elapsed="1.743631"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:45.896132" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Login Menu Item"]</msg>
+<arg>xpath=//android.widget.TextView[@content-desc="Login Menu Item"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-03-08T22:31:45.748852" elapsed="0.147686"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:45.899675" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Login Menu Item"]'.</msg>
+<msg time="2025-03-08T22:31:46.597833" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Login Menu Item"]</msg>
+<arg>xpath=//android.widget.TextView[@content-desc="Login Menu Item"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:45.897364" elapsed="0.700674"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:44.004125" elapsed="2.594553"/>
+</kw>
+<kw name="User should be on login page">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:46.643148" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/loginTV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/loginTV</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-03-08T22:31:46.600913" elapsed="0.042413"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:46.600123" elapsed="0.043624"/>
+</kw>
+<kw name="User login using valid data">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:46.645397" level="INFO">Typing text 'bod@example.com' into text field 'id=com.saucelabs.mydemoapp.android:id/nameET'</msg>
+<msg time="2025-03-08T22:31:46.686969" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/nameET</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/nameET</arg>
+<arg>bod@example.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:46.644436" elapsed="0.042701"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:46.694312" level="INFO">Typing text '10203040' into text field 'id=com.saucelabs.mydemoapp.android:id/passwordET'</msg>
+<msg time="2025-03-08T22:31:47.225629" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/passwordET</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/passwordET</arg>
+<arg>10203040</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:46.687394" elapsed="0.538634"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:47.228911" level="INFO">Clicking element 'id=com.saucelabs.mydemoapp.android:id/loginBtn'.</msg>
+<msg time="2025-03-08T22:31:47.767667" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/loginBtn</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/loginBtn</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:47.226581" elapsed="0.541205"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:46.644216" elapsed="1.123699"/>
+</kw>
+<kw name="User validate Log Out text appears on sidebar menu">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:47.813624" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/menuIV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/menuIV</arg>
+<arg>timeout=${WAIT_TIME_OUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-03-08T22:31:47.768707" elapsed="0.045056"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:47.818606" level="INFO">Clicking element 'id=com.saucelabs.mydemoapp.android:id/menuIV'.</msg>
+<msg time="2025-03-08T22:31:49.832049" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/menuIV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/menuIV</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:47.814873" elapsed="2.018154"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:49.897762" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]'.</msg>
+<msg time="2025-03-08T22:31:49.897897" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Logout Menu Item"]</msg>
+<arg>xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-08T22:31:49.834616" elapsed="0.063357"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:47.768270" elapsed="2.129900"/>
+</kw>
+<tag>webdriver</tag>
+<status status="PASS" start="2025-03-08T22:31:43.602764" elapsed="6.295816"/>
+</test>
+<test id="s1-t2" name="User should be success to logout from sidebar menu" line="23">
+<kw name="User should be on sidebar menu">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:49.948112" level="INFO">Current page contains element 'id=com.saucelabs.mydemoapp.android:id/menuRV'.</msg>
+<msg time="2025-03-08T22:31:49.948277" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/menuRV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/menuRV</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-08T22:31:49.900394" elapsed="0.048020"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:49.899929" elapsed="0.048881"/>
+</kw>
+<kw name="User click logout on sidebar menu">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:50.018561" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]'.</msg>
+<msg time="2025-03-08T22:31:50.018711" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Logout Menu Item"]</msg>
+<arg>xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-08T22:31:49.950269" elapsed="0.068516"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:50.021280" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]'.</msg>
+<msg time="2025-03-08T22:31:50.115008" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Logout Menu Item"]</msg>
+<arg>xpath=//android.widget.TextView[@content-desc="Logout Menu Item"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:50.019052" elapsed="0.096099"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:49.949240" elapsed="0.166066"/>
+</kw>
+<kw name="User choose to logout">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:50.769116" level="INFO">Current page contains element 'id=com.saucelabs.mydemoapp.android:id/parentPanel'.</msg>
+<msg time="2025-03-08T22:31:50.769250" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/parentPanel</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/parentPanel</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-08T22:31:50.116716" elapsed="0.652614"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:50.771908" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<msg time="2025-03-08T22:31:50.834780" level="INFO">criteria is android:id/button1</msg>
+<arg>id=android:id/button1</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:50.769622" elapsed="0.065379"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:50.115877" elapsed="0.719376"/>
+</kw>
+<kw name="User will be redirect to login page">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:51.136160" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/loginTV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/loginTV</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-03-08T22:31:50.836656" elapsed="0.299724"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:50.835952" elapsed="0.300676"/>
+</kw>
+<tag>webdriver</tag>
+<status status="PASS" start="2025-03-08T22:31:49.899062" elapsed="1.238340"/>
+</test>
+<test id="s1-t3" name="User can not login using locked out account" line="29">
+<kw name="User login using locked out account">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:51.142174" level="INFO">Typing text 'alice@example.com (locked out)' into text field 'id=com.saucelabs.mydemoapp.android:id/nameET'</msg>
+<msg time="2025-03-08T22:31:52.018059" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/nameET</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/nameET</arg>
+<arg>alice@example.com (locked out)</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:51.139722" elapsed="0.878568"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:52.020019" level="INFO">Typing text '10203040' into text field 'id=com.saucelabs.mydemoapp.android:id/passwordET'</msg>
+<msg time="2025-03-08T22:31:52.557097" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/passwordET</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/passwordET</arg>
+<arg>10203040</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:52.018597" elapsed="0.538777"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:52.560757" level="INFO">Clicking element 'id=com.saucelabs.mydemoapp.android:id/loginBtn'.</msg>
+<msg time="2025-03-08T22:31:53.155308" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/loginBtn</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/loginBtn</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-08T22:31:52.558352" elapsed="0.597129"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:51.139328" elapsed="2.016524"/>
+</kw>
+<kw name="User should see error message on login page">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-08T22:31:53.679649" level="INFO">Current page contains element 'id=com.saucelabs.mydemoapp.android:id/passwordErrorTV'.</msg>
+<msg time="2025-03-08T22:31:53.680363" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/passwordErrorTV</msg>
+<arg>id=com.saucelabs.mydemoapp.android:id/passwordErrorTV</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-08T22:31:53.157399" elapsed="0.523108"/>
+</kw>
+<status status="PASS" start="2025-03-08T22:31:53.156632" elapsed="0.524078"/>
+</kw>
+<tag>webdriver</tag>
+<status status="PASS" start="2025-03-08T22:31:51.138413" elapsed="2.542587"/>
+</test>
+<doc>Simple example using AppiumLibrary</doc>
+<status status="PASS" start="2025-03-08T22:31:38.769901" elapsed="14.912012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">webdriver</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="My-Demo-App">My-Demo-App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
